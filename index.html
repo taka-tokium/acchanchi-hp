@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>観戦居酒屋あっちゃん家｜千葉県茂原市のスポーツ観戦居酒屋</title>
+  <meta name="description" content="千葉県茂原市・新茂原駅徒歩6分のスポーツ観戦居酒屋「あっちゃん家」。モニター5台（DAZN・WOWOW）でスポーツ観戦をしながら、炭火焼き鳥とお酒を楽しめるアットホームなお店。駐車場完備・20名以上で貸切OK・パブリックビューイングも開催！">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="canonical" href="https://taka-tokium.github.io/acchanchi-hp/">
+  <!-- OGP（LINE・X等でURL共有時のカード表示）。独自ドメイン移行時はURLを差し替えること -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="観戦居酒屋あっちゃん家｜千葉県茂原市のスポーツ観戦居酒屋">
+  <meta property="og:description" content="モニター5台でスポーツ観戦しながら炭火焼き鳥とお酒！新茂原駅徒歩6分・駐車場完備・貸切OK。">
+  <meta property="og:url" content="https://taka-tokium.github.io/acchanchi-hp/">
+  <meta property="og:image" content="https://taka-tokium.github.io/acchanchi-hp/images/og-image.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#top" class="header-logo">
+        <span class="logo-mark">🍺⚽</span>
+        <span class="logo-text">観戦居酒屋あっちゃん家</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">お店について</a>
+        <a href="#menu">メニュー</a>
+        <a href="#news">お知らせ</a>
+        <a href="#info">店舗情報</a>
+        <a href="#reserve" class="nav-reserve">ご予約</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero" id="top">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content">
+      <p class="hero-badge">🎉 祝オープン OPEN ✨</p>
+      <h1 class="hero-title">
+        <span class="hero-title-sub">スポーツ観戦 × 居酒屋</span>
+        <span class="hero-title-main">あっちゃん家</span>
+      </h1>
+      <p class="hero-catch" id="heroCatch">スポーツ観戦しながら、うまい酒とメシ。</p>
+      <div class="hero-buttons">
+        <a href="#reserve" class="btn btn-primary">ご予約はこちら</a>
+        <a href="#" class="btn btn-outline" id="heroInsta" target="_blank" rel="noopener">Instagramを見る</a>
+      </div>
+    </div>
+    <div class="hero-scroll">SCROLL ▼</div>
+  </section>
+
+  <!-- お店について -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title"><span class="section-en">ABOUT</span>お店について</h2>
+      <p class="about-lead">
+        観戦居酒屋あっちゃん家は、<br class="pc-only">
+        <strong>スポーツ観戦をしながらお酒とお食事を楽しめる</strong>、<br class="pc-only">
+        千葉県茂原市のアットホームな居酒屋です。
+      </p>
+      <div class="feature-grid" id="featureGrid"></div>
+    </div>
+  </section>
+
+  <!-- 写真ギャラリー -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-title"><span class="section-en">GALLERY</span>お店の様子</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- メニュー -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <h2 class="section-title"><span class="section-en">MENU</span>メニュー</h2>
+      <div class="menu-grid" id="menuGrid"></div>
+      <p class="menu-note">※価格はすべて税込です。仕入れ状況によりメニューが変わる場合があります。</p>
+    </div>
+  </section>
+
+  <!-- お知らせ・イベント -->
+  <section class="section news" id="news">
+    <div class="container">
+      <h2 class="section-title"><span class="section-en">NEWS</span>お知らせ・イベント</h2>
+      <ul class="news-list" id="newsList"></ul>
+      <div class="insta-block">
+        <p class="insta-lead">試合スケジュール・イベント情報はInstagramで発信中！</p>
+        <div class="insta-embeds" id="instaEmbeds"></div>
+        <a href="#" class="btn btn-insta" id="instaBtn" target="_blank" rel="noopener">
+          📷 Instagramをフォローする
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 店舗情報 -->
+  <section class="section info" id="info">
+    <div class="container">
+      <h2 class="section-title"><span class="section-en">INFO</span>店舗情報</h2>
+      <div class="info-grid">
+        <table class="info-table" id="infoTable"></table>
+        <div class="info-map">
+          <iframe
+            id="mapFrame"
+            src=""
+            width="100%" height="300" style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="あっちゃん家の地図"></iframe>
+          <a href="#" class="map-link" id="mapLink" target="_blank" rel="noopener">📍 Googleマップで開く</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 予約 -->
+  <section class="section reserve" id="reserve">
+    <div class="container">
+      <h2 class="section-title reserve-title"><span class="section-en">RESERVE</span>ご予約</h2>
+      <p class="reserve-lead">ご予約・お問い合わせはお電話にてお気軽にどうぞ！</p>
+      <a href="tel:0475-47-3914" class="reserve-tel" id="reserveTel">📞 0475-47-3914</a>
+      <p class="reserve-note">「ホームページを見た」とお伝えいただけるとスムーズです</p>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p class="footer-logo">観戦居酒屋あっちゃん家 <span class="footer-roman">ACCHANCHI</span></p>
+    <p class="footer-copy">&copy; <span id="year"></span> 観戦居酒屋あっちゃん家</p>
+  </footer>
+
+  <!-- スマホ用固定予約バー -->
+  <a href="tel:0475-47-3914" class="fixed-tel" id="fixedTel">📞 電話で予約する</a>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
