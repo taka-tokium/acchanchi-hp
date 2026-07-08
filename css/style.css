@@ -216,7 +216,10 @@ a { color: inherit; text-decoration: none; }
 }
 .menu-items li.menu-subheading:first-child { padding-top: 0; }
 .menu-price { font-weight: 700; color: var(--navy); white-space: nowrap; margin-left: 12px; }
-.menu-note { text-align: center; margin-top: 28px; font-size: 0.85rem; color: #888; }
+.menu-note {
+  text-align: center; margin-top: 28px; color: #888;
+  white-space: nowrap; font-size: clamp(0.6rem, 3.2vw, 0.85rem);
+}
 
 /* ---------- お知らせ ---------- */
 .news { background: var(--navy); color: var(--white); }
@@ -276,7 +279,12 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.2s;
 }
 .reserve-tel:hover { transform: scale(1.03); }
-.reserve-note { margin-top: 18px; font-size: 0.88rem; opacity: 0.9; }
+.reserve-note {
+  margin-top: 18px; opacity: 0.9;
+  white-space: nowrap; font-size: clamp(0.6rem, 3.3vw, 0.88rem);
+}
+/* スマホ幅だけ有効な改行 */
+@media (min-width: 768px) { .sp-only { display: none; } }
 
 /* ---------- フッター ---------- */
 .footer { background: var(--navy-dark); color: var(--white); text-align: center; padding: 36px 20px 90px; }
