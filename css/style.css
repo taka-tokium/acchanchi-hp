@@ -163,7 +163,7 @@ a { color: inherit; text-decoration: none; }
 }
 .feature-icon { font-size: 2.2rem; margin-bottom: 12px; }
 .feature-title { font-family: var(--font-head); font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; }
-.feature-text { font-size: 0.92rem; }
+.feature-text { font-size: 0.92rem; text-wrap: pretty; }
 
 /* ---------- ギャラリー ---------- */
 .gallery { background: var(--white); }
