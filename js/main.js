@@ -55,20 +55,32 @@
       <div class="menu-card">
         <h3 class="menu-category">${cat.category}</h3>
         ${cat.note ? `<p class="menu-cat-note">${cat.note}</p>` : ""}
-        <ul class="menu-items">
-          ${cat.items
-            .map(
-              (item) => `
-            <li>
-              <span>${item.name}</span>
-              <span class="menu-price">${formatPrice(item.price)}</span>
-            </li>`
-            )
-            .join("")}
-        </ul>
+        <div class="menu-items-wrap">
+          <ul class="menu-items">
+            ${cat.items
+              .map(
+                (item) => `
+              <li>
+                <span>${item.name}</span>
+                <span class="menu-price">${formatPrice(item.price)}</span>
+              </li>`
+              )
+              .join("")}
+          </ul>
+        </div>
       </div>`
     )
     .join("");
+
+  // 収まりきらないカードにだけ「スクロールで続き」ヒントを付ける
+  document.querySelectorAll(".menu-card .menu-items-wrap").forEach((wrap) => {
+    if (wrap.scrollHeight > wrap.clientHeight + 4) {
+      const hint = document.createElement("p");
+      hint.className = "menu-scroll-hint";
+      hint.textContent = "スクロールで続きが見れます ⌄";
+      wrap.parentElement.appendChild(hint);
+    }
+  });
 
   function formatPrice(price) {
     if (typeof price === "number") return price.toLocaleString() + "円";

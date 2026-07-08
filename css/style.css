@@ -186,12 +186,19 @@ a { color: inherit; text-decoration: none; }
 /* ---------- メニュー ---------- */
 .menu-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .menu-card {
-  background: var(--white); border-radius: 16px; padding: 26px;
+  background: var(--white); border-radius: 16px; padding: 26px 26px 16px;
   box-shadow: 0 4px 14px rgba(23,37,90,0.08);
+  height: 400px; display: flex; flex-direction: column;
 }
+.menu-items-wrap { flex: 1; overflow-y: auto; padding-right: 8px; min-height: 0; }
+/* スクロールバーを常時見せて「続きがある」ことを伝える */
+.menu-items-wrap::-webkit-scrollbar { width: 6px; }
+.menu-items-wrap::-webkit-scrollbar-track { background: #f1ece0; border-radius: 3px; }
+.menu-items-wrap::-webkit-scrollbar-thumb { background: #c9c2b2; border-radius: 3px; }
+.menu-scroll-hint { font-size: 0.72rem; color: #aaa; text-align: right; padding-top: 6px; }
 .menu-category {
   font-family: var(--font-head); font-size: 1.15rem; color: var(--white);
-  background: var(--red); display: inline-block;
+  background: var(--red); display: inline-block; align-self: flex-start;
   padding: 4px 18px; border-radius: 999px; margin-bottom: 6px;
 }
 .menu-cat-note { font-size: 0.82rem; color: #888; margin-bottom: 12px; }
@@ -251,9 +258,10 @@ a { color: inherit; text-decoration: none; }
 .reserve-lead { margin-bottom: 24px; font-size: 1.05rem; }
 .reserve-tel {
   display: inline-block; font-family: var(--font-head);
-  font-size: clamp(1.8rem, 7vw, 2.8rem);
+  font-size: clamp(1.4rem, 5.5vw, 2.8rem);
+  white-space: nowrap;
   background: var(--white); color: var(--red);
-  padding: 16px 40px; border-radius: 999px;
+  padding: 16px clamp(20px, 6vw, 40px); border-radius: 999px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   transition: transform 0.2s;
 }
