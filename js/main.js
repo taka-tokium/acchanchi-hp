@@ -58,10 +58,12 @@
         <div class="menu-items-wrap">
           <ul class="menu-items">
             ${cat.items
-              .map(
-                (item) => `
+              .map((item) =>
+                item.heading
+                  ? `<li class="menu-subheading">${item.heading}</li>`
+                  : `
               <li>
-                <span>${item.name}</span>
+                <span>${formatName(item.name)}</span>
                 <span class="menu-price">${formatPrice(item.price)}</span>
               </li>`
               )
@@ -81,6 +83,13 @@
       wrap.parentElement.appendChild(hint);
     }
   });
+
+  // 品名の（〜）部分は2行目に小さく表示（狭い画面での中途半端な折り返し防止）
+  function formatName(name) {
+    const i = name.indexOf("（");
+    if (i === -1) return name;
+    return `${name.slice(0, i)}<span class="menu-item-sub">${name.slice(i)}</span>`;
+  }
 
   function formatPrice(price) {
     if (typeof price === "number") return price.toLocaleString() + "円";

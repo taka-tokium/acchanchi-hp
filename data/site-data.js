@@ -190,31 +190,29 @@ const SITE_DATA = {
       ],
     },
     {
-      category: "焼酎",
+      category: "焼酎・日本酒",
       note: "",
       items: [
+        { heading: "焼酎" },
         { name: "麦・芋・甲類（グラス）", price: 500 },
         { name: "緑茶割り", price: 500 },
         { name: "ウーロン割り", price: 500 },
         { name: "ソーダ割り", price: 500 },
+        { heading: "日本酒" },
+        { name: "八海山（冷酒・熱燗）", price: 650 },
       ],
     },
     {
       category: "ボトル",
       note: "割り材：氷300・水300・お茶350・ウーロン茶350・レモンカット350・梅干し250",
       items: [
-        { name: "角（ウイスキー）", price: 4400 },
         { name: "黒霧島", price: 3300 },
         { name: "赤霧島", price: 3300 },
         { name: "いいちこ", price: 3300 },
-        { name: "二階堂", price: 3500 },
         { name: "キンミヤ", price: 3300 },
+        { name: "二階堂", price: 3500 },
+        { name: "角（ウイスキー）", price: 4400 },
       ],
-    },
-    {
-      category: "日本酒",
-      note: "",
-      items: [{ name: "八海山（冷酒・熱燗）", price: 650 }],
     },
     {
       category: "ソフトドリンク",

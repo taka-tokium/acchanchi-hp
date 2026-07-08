@@ -208,6 +208,13 @@ a { color: inherit; text-decoration: none; }
   padding: 9px 0; border-bottom: 1px dashed #ddd; font-size: 0.95rem;
 }
 .menu-items li:last-child { border-bottom: none; }
+.menu-item-sub { display: block; font-size: 0.78rem; color: #999; line-height: 1.4; }
+.menu-items li.menu-subheading {
+  display: block; border-bottom: 2px solid var(--yellow);
+  font-family: var(--font-head); font-size: 0.85rem; color: var(--navy);
+  padding: 12px 0 2px;
+}
+.menu-items li.menu-subheading:first-child { padding-top: 0; }
 .menu-price { font-weight: 700; color: var(--navy); white-space: nowrap; margin-left: 12px; }
 .menu-note { text-align: center; margin-top: 28px; font-size: 0.85rem; color: #888; }
 
@@ -255,7 +262,10 @@ a { color: inherit; text-decoration: none; }
 }
 .reserve-title { color: var(--white); }
 .reserve .section-en { color: var(--yellow); }
-.reserve-lead { margin-bottom: 24px; font-size: 1.05rem; }
+.reserve-lead {
+  margin-bottom: 24px; white-space: nowrap;
+  font-size: clamp(0.78rem, 3.9vw, 1.05rem);
+}
 .reserve-tel {
   display: inline-block; font-family: var(--font-head);
   font-size: clamp(1.4rem, 5.5vw, 2.8rem);
