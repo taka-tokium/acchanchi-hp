@@ -164,6 +164,7 @@
     const ld = {
       "@context": "https://schema.org",
       "@type": d.structured.type,
+      url: d.structured.url,
       name: d.shop.name,
       alternateName: d.shop.nameRoman,
       description: d.shop.catchphrase,

@@ -24,6 +24,7 @@ const SITE_DATA = {
   // 住所や営業時間を変えたらここも合わせて更新すること
   structured: {
     type: "BarOrPub",
+    url: "https://acchanchi.com/",
     postalCode: "297-0074",
     region: "千葉県",
     locality: "茂原市",
